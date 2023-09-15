@@ -1,9 +1,7 @@
 import classes from './CartItem.module.css';
-import React,{useContext} from 'react';
-
 const CartItem = (props) => {
   const price = `$${props.price}`;
-  // const crtctx=useContext(CartContext)
+  
 
   return (
     <li className={classes['cart-item']}>
