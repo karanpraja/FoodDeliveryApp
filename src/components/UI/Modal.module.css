@@ -9,6 +9,7 @@
 }
 
 .modal {
+  margin: -80px 0 0 0 ;
   position: fixed;
   top: 20vh;
   left: 5%;
@@ -23,6 +24,7 @@
 
 @media (min-width: 768px) {
   .modal {
+    margin:-80px 0 0 0;
     width: 40rem;
     left: calc(50% - 20rem);
   }
