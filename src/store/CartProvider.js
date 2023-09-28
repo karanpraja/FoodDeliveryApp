@@ -48,6 +48,10 @@ updatedItems[existingCartItemIndex]=updatedItem;
     return{
       items:updatedItems,totalAmount:updatedTotalAmount
     }}
+    if(action.type==='ORDER')
+    {
+      return defaultCartState
+    }
   return defaultCartState;
 };
 
@@ -61,12 +65,16 @@ const CartProvider = (props) => {
   const removeItemFromCartHandler = (id) => {
     dispatchCartAction({type: 'REMOVE', id: id});
   };
+  const OrderItemsFromCart=()=>{
+    dispatchCartAction({type:"ORDER"})
+  }
 
   const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
+    orderItem:OrderItemsFromCart
   };
 
   return (
